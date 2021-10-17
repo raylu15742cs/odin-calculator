@@ -1,5 +1,6 @@
 var x = document.getElementsByTagName("button");
 var y = document.getElementById('answers');
+var t = document.getElementById('running');
 let z = 0;
 let a = 0;
 let firstv = 0;
@@ -11,6 +12,7 @@ while (z <= 8 ){
     x.item(z).addEventListener("click",function(){
         if(!isNaN(mess)){
             y.innerHTML += mess;
+            t.innerHTML += y.innerHTML;
         };
     });
     //document.getElementById('answer').innerHTML += x.item(z).innerHTML;
@@ -18,24 +20,29 @@ while (z <= 8 ){
     z += 1;
 }
 x.item(9).addEventListener('click',function(){
-    empty();
+    y.innerHTML = "";
+    t.innerHTML = "";
 })
 x.item(10).addEventListener('click',function() {
+    t.innerHTML += "+";
     firstv = y.innerHTML;
     operator = 1;
     empty();
 })
 x.item(11).addEventListener('click',function() {
+    t.innerHTML += "-";
     firstv = y.innerHTML;
     operator = 2;
     empty();
 })
 x.item(12).addEventListener('click',function() {
+    t.innerHTML += "*";
     firstv = y.innerHTML;
     operator = 3;
     empty();
 })
 x.item(13).addEventListener('click',function() {
+    t.innerHTML += "/";
     firstv = y.innerHTML;
     operator = 4;
     empty();
