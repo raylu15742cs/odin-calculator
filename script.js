@@ -12,7 +12,7 @@ while (z <= 8 ){
     x.item(z).addEventListener("click",function(){
         if(!isNaN(mess)){
             y.innerHTML += mess;
-            t.innerHTML += y.innerHTML;
+            t.innerHTML += mess;
         };
     });
     //document.getElementById('answer').innerHTML += x.item(z).innerHTML;
